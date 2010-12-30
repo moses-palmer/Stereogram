@@ -4,6 +4,8 @@
 		<Project filename="stereo/stereo.cbp" />
 		<Project filename="Test/Test.cbp" active="1">
 			<Depends filename="stereo/stereo.cbp" />
+			<Depends filename="maze/maze.cbp" />
 		</Project>
+		<Project filename="maze/maze.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
