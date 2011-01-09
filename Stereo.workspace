@@ -3,6 +3,7 @@
 	<Workspace title="Workspace">
 		<Project filename="Test/Test.cbp" active="1">
 			<Depends filename="maze/maze.cbp" />
+			<Depends filename="stereo/stereo.cbp" />
 		</Project>
 		<Project filename="maze/maze.cbp" />
 		<Project filename="stereo/stereo.cbp" />
