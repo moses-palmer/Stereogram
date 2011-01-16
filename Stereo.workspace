@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
-		<Project filename="Test/Test.cbp" active="1">
+		<Project filename="Test/Test.cbp">
 			<Depends filename="maze/maze.cbp" />
 			<Depends filename="stereo/stereo.cbp" />
 		</Project>
 		<Project filename="maze/maze.cbp" />
 		<Project filename="stereo/stereo.cbp" />
+		<Project filename="InAmazing3D/InAmazing3D.cbp" active="1">
+			<Depends filename="maze/maze.cbp" />
+			<Depends filename="stereo/stereo.cbp" />
+		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>
