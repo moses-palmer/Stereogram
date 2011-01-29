@@ -7,9 +7,10 @@
 		</Project>
 		<Project filename="maze/maze.cbp" />
 		<Project filename="stereo/stereo.cbp" />
-		<Project filename="InAmazing3D/InAmazing3D.cbp" active="1">
+		<Project filename="InAmazing3D/InAmazing3D.cbp">
 			<Depends filename="maze/maze.cbp" />
 			<Depends filename="stereo/stereo.cbp" />
 		</Project>
+		<Project filename="Stereogram/Stereogram.cbp" active="1" />
 	</Workspace>
 </CodeBlocks_workspace_file>
