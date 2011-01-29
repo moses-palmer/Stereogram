@@ -1,9 +1,22 @@
 #include <stdio.h>
+#include <time.h>
 
 #include <effect.h>
 #include <stereo.h>
 
+#define ARGUMENTS_NO_TEARDOWN
 #include <arguments.h>
+
+static int
+setup(int argc, char *argv[])
+{
+    time_t t;
+
+    printf("Huff\n");
+    srand((int)time(&t));
+
+    return 0;
+}
 
 /**
  * Calculates the mean of the colour values for every pixel and sets all colour
@@ -28,7 +41,7 @@ luminance_apply(StereoPattern *depth_pattern)
 }
 
 static int
-start(int argc, char *argv[],
+run(int argc, char *argv[],
     FILE* in_file,
     FILE* out_file,
     StereoPattern* pattern,
