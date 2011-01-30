@@ -12,7 +12,6 @@ setup(int argc, char *argv[])
 {
     time_t t;
 
-    printf("Huff\n");
     srand((int)time(&t));
 
     return 0;
@@ -44,6 +43,7 @@ static int
 run(int argc, char *argv[],
     FILE* in_file,
     FILE* out_file,
+    pattern_size_t pattern_size,
     StereoPattern* pattern,
     double strength,
     int invert_depth,

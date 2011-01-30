@@ -11,9 +11,10 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="--help --in-file zbuffer.png --out-file stereogram.png" />
 				<Compiler>
+					<Add option="-Wall" />
 					<Add option="-g" />
-					<Add directory="../stereo" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -31,18 +32,17 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="../arguments" />
+			<Add directory="../stereo" />
+			<Add directory="./" />
 		</Compiler>
 		<Linker>
 			<Add library="../stereo/libstereo.a" />
 			<Add library="pthread" />
 			<Add library="libpng12" />
 		</Linker>
-		<Unit filename="argument-parser.h" />
 		<Unit filename="arguments.def" />
 		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="start.h">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
