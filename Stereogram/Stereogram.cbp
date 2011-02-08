@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="--help --in-file zbuffer.png --out-file stereogram.png" />
+				<Option parameters="--help --in-file zbuffer.png --out-file stereogram.png --pattern-size 75 75" />
 				<Compiler>
 					<Add option="-Wall" />
 					<Add option="-g" />

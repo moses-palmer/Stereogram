@@ -49,7 +49,10 @@ waves_randomize(double waves[], unsigned int count, double b, double d)
  */
 #endif
 
-_A(FILE*, in_file, "-i", 1, ARGUMENT_IS_OPTIONAL,
+_A(FILE*, in_file, "-i",
+    1,
+    ARGUMENT_IS_OPTIONAL,
+    "<z-buffer file>\n"
     "The z-buffer file. This has to be a PNG file. By default, stdin is used.",
 
     /* Reopen stdin as a binary stream */
@@ -67,7 +70,10 @@ _A(FILE*, in_file, "-i", 1, ARGUMENT_IS_OPTIONAL,
     fclose(*target);
 )
 
-_A(FILE*, out_file, "-o", 1, ARGUMENT_IS_OPTIONAL,
+_A(FILE*, out_file, "-o",
+    1,
+    ARGUMENT_IS_OPTIONAL,
+    "<output file>\n"
     "The output file. The stereogram will be written to this file as a PNG. "
     "By default, stdout is used.",
 
@@ -86,10 +92,10 @@ _A(FILE*, out_file, "-o", 1, ARGUMENT_IS_OPTIONAL,
     fclose(*target);
 )
 
-_A(struct {int width; int height;}, pattern_size,
-    "-d",
+_A(struct {int width; int height;}, pattern_size, "-d",
     2,
     ARGUMENT_IS_PRESENT(pattern) ? ARGUMENT_IS_OPTIONAL : ARGUMENT_IS_REQUIRED,
+    "<width> <height>\n"
     "The dimensions of the automatically generated pattern. This is required "
     "if no pattern image is specified.",
 
@@ -108,7 +114,10 @@ _A(struct {int width; int height;}, pattern_size,
     ,
 )
 
-_A(StereoPattern*, pattern, "-p", 1, ARGUMENT_IS_OPTIONAL,
+_A(StereoPattern*, pattern, "-p",
+    1,
+    ARGUMENT_IS_OPTIONAL,
+    "<pattern file>\n"
     "The pattern file. This has to be a PNG file. By default, a pattern image "
     "is generated.",
 
@@ -174,7 +183,10 @@ _A(StereoPattern*, pattern, "-p", 1, ARGUMENT_IS_OPTIONAL,
     stereo_pattern_free(*target);
 )
 
-_A(double, strength, "-s", 1, ARGUMENT_IS_OPTIONAL,
+_A(double, strength, "-s",
+    1,
+    ARGUMENT_IS_OPTIONAL,
+    "<strength>\n"
     "The strength with which to apply the stereogram effect.",
 
     *target = 6.0;
@@ -188,7 +200,9 @@ _A(double, strength, "-s", 1, ARGUMENT_IS_OPTIONAL,
     ,
 )
 
-_A(int, invert_depth, "-i", 0, ARGUMENT_IS_OPTIONAL,
+_A(int, invert_depth, "-i",
+    0,
+    ARGUMENT_IS_OPTIONAL,
     "Whether to invert the depth channel.",
 
     *target = 0;
@@ -200,10 +214,15 @@ _A(int, invert_depth, "-i", 0, ARGUMENT_IS_OPTIONAL,
     ,
 )
 
-_A(int, channel, "-c", 1, ARGUMENT_IS_OPTIONAL,
+_A(int, channel, "-c",
+    1,
+    ARGUMENT_IS_OPTIONAL,
+    "<channel>\n"
     "The colour channel (r, g, b, a or l) to use as depth channel. If not "
-    "specified, l is used. The luminance (l) is calculated by summing all "
-    "colour channels and dividing by 3.",
+    "specified, l (the luminance) is used.\n"
+    "\n"
+    "The luminance is calculated by summing all colour channels and dividing "
+    "by 3.",
 
     *target = -1;
 
