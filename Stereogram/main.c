@@ -40,7 +40,7 @@ luminance_apply(StereoPattern *depth_pattern)
 }
 
 static int
-run(int argc, char *argv[],
+main(int argc, char *argv[],
     FILE* in_file,
     FILE* out_file,
     pattern_size_t pattern_size,
