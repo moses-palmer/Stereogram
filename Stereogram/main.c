@@ -5,7 +5,7 @@
 #include <stereo.h>
 
 #define ARGUMENTS_NO_TEARDOWN
-#include <arguments.h>
+#include "arguments/arguments.h"
 
 static int
 setup(int argc, char *argv[])

@@ -1,0 +1,9 @@
+[submodule "maze"]
+	path = maze
+	url = git@github.com:moses-palmer/libmaze
+[submodule "stereo"]
+	path = stereo
+	url = git@github.com:moses-palmer/libstereo
+[submodule "Stereogram/arguments"]
+	path = Stereogram/arguments
+	url = git@github.com:moses-palmer/arguments
