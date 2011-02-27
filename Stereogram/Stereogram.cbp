@@ -42,6 +42,8 @@
 			<Add library="libpng12" />
 		</Linker>
 		<Unit filename="arguments.def" />
+		<Unit filename="arguments/arguments-help.h" />
+		<Unit filename="arguments/arguments.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
